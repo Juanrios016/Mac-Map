@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchin Room</title>
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Mac Map</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Mac Map" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.js"></script>
+    
+    <!-- maphilight --> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+
+</head>
+
+<body>
+    <a href="./Index.html"> Home Page!</a>
+
+    
+    
+    <!-- <img src="Floor Plans/CarnegieFirstFloor.png" />
+    <p class="floorName"> Carnigie: First Floor</p>
+    <p></p> -->
+
+
+
+    <!-- -------------------------------------------------------- -->
+
+    <div>
+        <div>
+            <button class="topnav" onclick="changeImageLL();">Lower level</button>
+            <button class="topnav" onclick="changeImageGG();">1st Floor</button>
+            <button class="topnav" onclick="changeImage2L();">2nd Floor</button>
+            <button class="topnav" onclick="changeImage3L();">3rd Floor</button>
+            <button class="topnav" onclick="changeImage4L();">4th Floor</button>
+            <div class="wrapper">
+              <div class="content" role="main">
+                <!-- This is the start of content for our page -->
+                <!-- This is code for the text field that takes a room number as an input-->
+                <form>
+                  Room Number :
+                  <input
+                    type="text"
+                    id="InputRoom"
+                    size="10"
+                    oninput="getRoomNumber()"
+                  />
+                </form>
+      
+                <p id="roomDisplay"></p>
+                
+                <!-- Maybe we want to try something like this:
+                    https://www.w3schools.com/tags/att_select_name.asp
+                    That way users can see what map they are looking at.-->
+             <!--   <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <option id="test1" onClick="">Olin Rice Center</option>
+                    <option id="test2" onClick="changeCarn()">Carnegie</option>
+                    <option id="test3" onClick="changeImageLL()">Library</option>
+                  </div>
+                </div> -->
+                
+                <label for="building">Choose a Macalester Building:</label>
+      
+      <select name="build" id="build">
+        <option value="library">Library</option>
+        <option value="orl">Olin Rice Center</option>
+        <option value="carn"  onClick="buildingChange()">Carnegie</option>
+      </select>
+      <br><br>
+        <input type="submit" value="Submit" onClick="buildingChange()">
+      </form>
+                
+            <!-- <select name="buildings" class="buildings" tabindex="2">
+        <option value="ORL">Library</option>
+        <option value="CARN">Carnegie</option>
+        <option value="LIB">Olin Rice Center</option>
+      </select> -->
+      
+                
+                <img
+                  id="image"
+                  src="https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262"
+                  class="illustration"
+                  alt="Lower Level"
+                  title="DeWitt Wallace Library"
+                />
+              </div>
+            </div>
+          </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
