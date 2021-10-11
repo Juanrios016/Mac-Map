@@ -2,19 +2,13 @@
     box-sizing:  border-box;
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
-    text-align: center;
-}
 
-
-/*Header*/
+/* Header
 header {
     position: absolute;
     margin-top: 1em;
-}
-
+} */
+/*
 The style rules specify elements by type and by attributes such as class and ID
 Each section indicates an element or elements, then lists the style properties to apply
 See if you can cross-reference the rules in this file with the elements in index.html
@@ -196,18 +190,6 @@ h2 {
 color: #2800FF;
 }
 
-/* Random Button - (Juan)*/
-.Click-here {
-cursor: pointer;
-background-image: linear-gradient(190deg, #f83600 0%, #fee140 100%);
-color: #fff;
-width: 180px;
-text-align: center;
-font-size:16px;
-padding: 18px 0;
-margin: 0 auto;
-transition:background-image 3s ease-in-out;
-}
 .Click-here:hover{
 transition:background-image 3s ease-in-out;
 background-image: linear-gradient(90deg, #fee140 0%, #f83600 100%);
