@@ -14,3 +14,8 @@ $(function() {
     $('.map').maphilight();
 });
 
+$(document).ready(function(){
+  $("#JqueryTest").click(function(){
+    $("img").hide();
+  });
+});
