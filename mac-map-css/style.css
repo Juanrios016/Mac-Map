@@ -136,16 +136,7 @@ align-items: center;
 justify-content: center;
 }
 
-/* Very light scaling for our illustration
-.title {
-color: #2800FF;
-font-family: HK Grotesk;
-font-style: normal;
-font-weight: bold;
-font-size: 100px;
-line-height: 105%;
-margin: 0;
-} */
+
 
 /* Very light scaling for our illustration */
 .illustration {
