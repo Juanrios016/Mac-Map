@@ -194,39 +194,23 @@ function buildingChange() {
   }
 }
 
+// canvas api
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-// recangles
-// Code to make rectangels could be useufl in highlighting things 
-
-
-// // paths 
-// ctx.beginPath();
-// ctx.moveTo(50,50);
-// ctx.lineTo(150,50);
-// ctx.lineTo(150,150);
-// ctx.closePath();
-// ctx.stroke();
-
-
 
 // Loads image onto the canvas 
-
-
-
-window.onload = function() {
 var img = new Image();   // Create new img element
-img.onload = function () {
-  //draw background image
-  ctx.drawImage(img, 0, 0); // for some reason 0,0,can't work 
-ctx.fillStyle = "red"
-ctx.fillRect(50,50, 150, 100);
-ctx.strokeRect(20,30, 150, 100)
-ctx.clearRect(0,0, 140, 90)
-}
+img.onload = render;
 img.src = '/images/CarnegieFirstFloor.png'; // Set source path
 
+function render() {
+  //draw background image
+  ctx.drawImage(img, 200, 200); // for some reason 0,0,can't work 
+
+  // highlight section
+  ctx.save();
+  ctx.globalAlpha = 0.5;
+  ctx.fillStyle = "yellow";
+  ctx.fillRect(300, 300, 100, 100);
+  ctx.restore();
 }
-
-
-
