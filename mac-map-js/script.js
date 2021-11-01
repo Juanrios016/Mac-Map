@@ -198,10 +198,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
 // recangles
 // Code to make rectangels could be useufl in highlighting things 
-// ctx.fillStyle = "red"
-// ctx.fillRect(100,100, 150, 100);
-// ctx.strokeRect(20,30, 150, 100)
-// ctx.clearRect(25,25, 140, 90)
+
 
 // // paths 
 // ctx.beginPath();
@@ -215,12 +212,21 @@ const ctx = canvas.getContext('2d');
 
 // Loads image onto the canvas 
 
+
+
+window.onload = function() {
 var img = new Image();   // Create new img element
 img.onload = function () {
   //draw background image
-  ctx.drawImage(img, 200, 200); // for some reason 0,0,can't work 
+  ctx.drawImage(img, 0, 0); // for some reason 0,0,can't work 
+ctx.fillStyle = "red"
+ctx.fillRect(50,50, 150, 100);
+ctx.strokeRect(20,30, 150, 100)
+ctx.clearRect(0,0, 140, 90)
 }
 img.src = '/images/CarnegieFirstFloor.png'; // Set source path
+
+}
 
 
 
