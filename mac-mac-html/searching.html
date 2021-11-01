@@ -16,7 +16,7 @@
       You can write text in a comment and the content won't be visible in the page
     -->
 
-    <title>Mac Map</title>
+    <!-- <title>Mac Map</title> -->
 
     <!-- Meta tags for SEO and social sharing -->
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
@@ -43,11 +43,12 @@
 
     <!-- Import the webpage's javascript file -->
     <script src="/mac-map-js/script.js" defer></script>
+    <script src="/mac-map-js/searching.js"></script>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/mac-map-js/jquery.js"></script>
-
+    
     <!-- maphilight -->
     <script
       type="text/javascript"
@@ -55,7 +56,7 @@
     ></script>
   </head>
   <body>
-
+    <!-- main menu code starts--------------------------------------------------------- -->
     <nav class="nav-main">
         <div class="btn-toggle-nav" onclick="toggleNav()"></div>
         <h1 class="title" >MAC MAP</h1>
@@ -70,20 +71,18 @@
         </ul>
     </aside>
 
-    <button class = "start-searching-button"> <a href="/mac-mac-html/searching.html"> Start Searching!</a> </button>
-    
-
-    <script src="/mac-map-js/landing-page.js"></script>
 
     <!-- main menu code ends--------------------------------------------------------- -->
 
     <!-- The wrapper and content divs set margins and positioning -->
     <div>
-      <button class="topnav" onclick="changeImageLL();">Lower level</button>
-      <button class="topnav" onclick="changeImageGG();">1st Floor</button>
-      <button class="topnav" onclick="changeImage2L();">2nd Floor</button>
-      <button class="topnav" onclick="changeImage3L();">3rd Floor</button>
-      <button class="topnav" onclick="changeImage4L();">4th Floor</button>
+      <div class="floors-btn">
+        <button class="topnav" onclick="changeImageLL();">Lower level</button>
+        <button class="topnav" onclick="changeImageGG();">1st Floor</button>
+        <button class="topnav" onclick="changeImage2L();">2nd Floor</button>
+        <button class="topnav" onclick="changeImage3L();">3rd Floor</button>
+        <button class="topnav" onclick="changeImage4L();">4th Floor</button>
+      </div>
       <div class="wrapper">
         <div class="content" role="main">
           <!-- This is the start of content for our page -->
