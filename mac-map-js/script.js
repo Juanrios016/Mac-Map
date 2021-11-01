@@ -197,53 +197,30 @@ function buildingChange() {
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
 // recangles
+// Code to make rectangels could be useufl in highlighting things 
 // ctx.fillStyle = "red"
-// ctx.fillRect(20,20, 150, 100);
+// ctx.fillRect(100,100, 150, 100);
 // ctx.strokeRect(20,30, 150, 100)
 // ctx.clearRect(25,25, 140, 90)
 
-// paths 
-ctx.beginPath();
-ctx.moveTo(50,50);
-ctx.lineTo(150,50);
-ctx.lineTo(150,150);
-ctx.closePath();
-ctx.stroke();
-
-//animation 1
-// const circle = {
-//   x: 200,
-//   y: 200,
-//   size: 30,
-//   dx: 5,
-//   dy:4
-// };
-
-// function drawCircle() {
-//   ctx.beginPath();
-//   ctx.arc(circle.x, circle.y, circle.size, 0, Math.PI *2 );
-//   ctx.fillStyle = "red";
-//   ctx.fill();
-// }
+// // paths 
+// ctx.beginPath();
+// ctx.moveTo(50,50);
+// ctx.lineTo(150,50);
+// ctx.lineTo(150,150);
+// ctx.closePath();
+// ctx.stroke();
 
 
-// function update() {
-//   ctx.clearRect(0,0,canvas.width, canvas.height);
-//   drawCircle();
-//   //change position
-//   circle.x += circle.dx
-//   requestAnimationFrame(update);
-//   console.log(123);
-// }
 
-// update()
+// Loads image onto the canvas 
 
-// picture 
+var img = new Image();   // Create new img element
+img.onload = function () {
+  //draw background image
+  ctx.drawImage(img, 200, 200); // for some reason 0,0,can't work 
+}
+img.src = '/images/CarnegieFirstFloor.png'; // Set source path
 
-const testImage = document.getElementById('test');
-ctx.drawImage(testImage);
-function drawFloorPlan() {
-  
-} 
 
-drawFloorPlan();
+
