@@ -1,16 +1,3 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
-
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-
 const btn = document.querySelector("button"); // Get the button from the page
 const input = document.querySelector("Room");
 // Detect clicks on the button
@@ -27,6 +14,7 @@ function changeImageGG() {
     return false;
   }
   if (e1 == "library") {
+    // render;
     img.src =
       "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605";
     return false;
@@ -200,8 +188,9 @@ const ctx = canvas.getContext('2d');
 
 // Loads image onto the canvas 
 var img = new Image();   // Create new img element
-img.onload = render2;
+img.onload = render;
 img.src = '/images/CarnegieFirstFloor.png'; // Set source path
+context.clearRect(0, 0, 800, 800);
 
 function render() {
   //draw background image
@@ -213,7 +202,9 @@ function render() {
   ctx.fillStyle = "yellow";
   ctx.fillRect(300, 300, 100, 100);
   ctx.restore();
+  context.clearRect(0, 0, 800, 800);
 }
+
 function render2() {
   ctx.drawImage(img, 0, 0);
   ctx.beginPath() // cordinates generated from https://www.image-map.net/ 
