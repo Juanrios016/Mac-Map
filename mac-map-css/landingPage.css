@@ -202,15 +202,61 @@ if we are referring back to an id, we use #variable */
   top: 0;
   left: 50px;
   margin-left: 20px;
-  margin-right: 20px;
-  /* position: calc(100wv - 100px); */
-  
+  margin-right: 20px;  
 }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   body {
-    background-color: lavender;
+    background-color: yellow;
+  }
+  .nav-main .title{
+    display: block;
+    /* text-align: center; */
+    position: center;
+    margin-left: 35px;
+    font-size: 16px;
+  }
+  .step-images{
+    width: 400px;
+    height: autho;
+  }
+  .nav-main{
+    height: 50px;
+  }
+  .btn-toggle-nav{
+    width: 50px;
+    height: 100%;
+  }
+  .nav-sidebar{
+    width: 0px;
+    height: calc(100vh - 50px);
+    padding: 0 0;  
+  }
+  .nav-sidebar ul{
+    padding: 10px;
+
+  }
+  .nav-sidebar ul li{
+    line-height: 15px;
+  }
+  .nav-sidebar ul li span{
+    display: block;
+    height: 45px;
+    font-size: 14px;
+  }
+   .nav-sidebar ul li a {
+    height: 45px;
+    font-size: 14x;  
+  }
+  #steps{
+    font-size: 12px;
+  }
+  .steps-mac-map{
+    top: 0;
+    left: 50px;
+    margin-left: 20px;
+    margin-right: 20px;  
   }
 }
 
