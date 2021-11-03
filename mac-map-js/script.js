@@ -200,12 +200,12 @@ const ctx = canvas.getContext('2d');
 
 // Loads image onto the canvas 
 var img = new Image();   // Create new img element
-img.onload = render;
+img.onload = render2;
 img.src = '/images/CarnegieFirstFloor.png'; // Set source path
 
 function render() {
   //draw background image
-  ctx.drawImage(img, 200, 200); // for some reason 0,0,can't work 
+  ctx.drawImage(img, 200, 200);
 
   // highlight section
   ctx.save();
@@ -213,4 +213,16 @@ function render() {
   ctx.fillStyle = "yellow";
   ctx.fillRect(300, 300, 100, 100);
   ctx.restore();
+}
+function render2() {
+  ctx.drawImage(img, 0, 0);
+  ctx.beginPath() // cordinates generated from https://www.image-map.net/ 
+  ctx.moveTo(329,44)
+  ctx.lineTo(361,45)
+  ctx.lineTo(360,131)
+  ctx.lineTo(327,130)
+  ctx.closePath();
+  ctx.strokeStyle = 'yellow'
+  ctx.stroke()
+
 }
