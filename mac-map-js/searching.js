@@ -1,6 +1,6 @@
 let toggleNavStatus = false;
 
-// making menu bar to work
+// making menu bar to work fro the searching page
 let toggleNav = function(){
     var getSidebar = document.querySelector(".nav-sidebar");
     let getSidebarUL = document.querySelector(".nav-sidebar ul");
