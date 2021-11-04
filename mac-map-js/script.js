@@ -4,7 +4,7 @@ const input = document.querySelector("Room");
 
 var roomNumber;
 
-function changeImageGG() {
+function changeImage1L() {
   var img = document.getElementById("image");
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
