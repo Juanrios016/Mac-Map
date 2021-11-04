@@ -91,13 +91,13 @@
             Room Number :
             <input
               type="text"
-              id="InputRoom"
+              class="InputRoom"
               size="10"
               oninput="getRoomNumber()"
             />
           </form>
 
-          <p id="roomDisplay"></p>
+          <p class="roomDisplay"></p>
 
           <label for="building">Choose a Macalester Building:</label>
 
@@ -107,7 +107,7 @@
             <option value="carn" onClick="buildingChange()">Carnegie</option>
           </select>
           <br /><br />
-          <input type="submit" value="Submit" onClick="buildingChange()" />
+          <input class = submit type="submit" value="Submit" onClick="buildingChange()" />
 
           <img
             id="image"
@@ -121,7 +121,7 @@
 
 
           <!-- This is the test map code. -->
-          <img src="/images/CarnegieFirstFloor.png" id="test" />
+          <img src="/images/CarnegieFirstFloor.png" id="test", class = "testimg" />
 
 
     <!-- <map name="image-map">
