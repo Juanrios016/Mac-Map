@@ -286,5 +286,61 @@ display: block;
     width: 300px;
     height: auto;
   }
-  
+
+}
+
+@media screen and (max-width: 460px) and (min-width: 377px) {
+  .steps-title{
+    padding-top: 10px;
+    font-size: 16px;
+  }
+  .illustration{
+    width: 420px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 377px) {
+  body {
+    background-color: yellow;
+  }
+  .nav-main .title{
+    display: block;
+    /* text-align: center; */
+    position: center;
+    margin-left: 35px;
+    font-size: 20px;
+  }
+  .illustration{
+    width: 500px;
+    height: auto;
+  }
+  .nav-main{
+    height: 50px;
+  }
+  .btn-toggle-nav{
+    width: 50px;
+    height: 100%;
+  }
+  .nav-sidebar{
+    width: 50px;
+    height: calc(100vh - 50px);
+    padding: 0 0;  
+  }
+  .nav-sidebar ul{
+    padding: 10px;
+
+  }
+  .nav-sidebar ul li{
+    line-height: 15px;
+  }
+  .nav-sidebar ul li span{
+    display: block;
+    height: 45px;
+    font-size: 14px;
+  }
+   .nav-sidebar ul li a {
+    height: 45px;
+    font-size: 14px;  
+  }
 }
