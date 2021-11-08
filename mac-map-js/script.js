@@ -2,130 +2,91 @@ const btn = document.querySelector("button"); // Get the button from the page
 const input = document.querySelector("Room");
 // Detect clicks on the button
 
+libraryImages = ["https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor2.png?v=1632164261836", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor3.png?v=1632164271313", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor4.png?v=1632164275904"];
+olinRiceImages = ["https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438"];
+carnegieImages = ["https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217","https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232",  "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282"];
+humanitiesImages = ["https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421"]; 
 var roomNumber;
 
+
+
 function changeImage1L() {
-  var img = document.getElementById("image");
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147";
-    return false;
+      loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
   }
   if (e1 == "library") {
     // render;
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605";
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605");
     return false;
   }
   
   if (e1 == "hum") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247"
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247");
     return false;
   }
   if (e1 == "orl") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885"
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885");
     return false;
   }
 }
 
 function changeImageLL() {
-  var img = document.getElementById("image");
-  var drop = document.getElementById("myDropdown");
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217";
-    return false;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
   }
   if (e1 == "library") {
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262";
-    return false;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262");
   }
 }
 
 function changeImage2L() {
-  var img = document.getElementById("image");
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232";
-    return false;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232");
+    
   }
   if (e1 == "library") {
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor2.png?v=1632164261836";
-    return false;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor2.png?v=1632164261836");
   }
   if (e1 == "hum") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481");
   }
   if (e1 == "orl") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941");
   }
 }
 
 function changeImage3L() {
-  var img = document.getElementById("image");
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042";
-    return false;
+  loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042");
   }
   if (e1 == "library") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor3.png?v=1632164271313";
-    return false;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor3.png?v=1632164271313");
   }
   if (e1 == "hum") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471");
   }
   if (e1 == "orl") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465");
   }
 }
 
 function changeImage4L() {
-  var img = document.getElementById("image");
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282";
-    return false;
+      loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282");
   }
   if (e1 == "library") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor4.png?v=1632164275904";
-    return false;
+      loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor4.png?v=1632164275904");
   }
   if (e1 == "hum") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421");
   }
   if (e1 == "orl") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438");
   }
 }
 
@@ -134,7 +95,6 @@ function getRoomNumber() {
   document.getElementById("roomDisplay").innerHTML = roomNumber;
 }
 
-function cleanUpString(number) {}
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -159,42 +119,37 @@ window.onclick = function(event) {
 function buildingChange() {
   var e = document.getElementById("build").value;
   if (e == "carn") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217";
+      loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
     return false;
   }
   if (e == "library") {
-    var img = document.getElementById("image");
-    img.src =
-      "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262";
-    return false;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262");
   }
   if (e == "hum") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247"
-    return false;
+    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247");
+
   }
   if (e == "orl") {
-    var img = document.getElementById("image");
-    img.src = "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885"
-    return false;
+  loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885");
   }
 }
 
 // canvas api
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("searchCanvas");
 const ctx = canvas.getContext('2d');
+var x = new Image();   // Create new img elementoad
 
-// Loads image onto the canvas 
-var img = new Image();   // Create new img element
-img.onload = render;
-img.src = '/images/CarnegieFirstFloor.png'; // Set source path
-context.clearRect(0, 0, 800, 800);
+function loadImage(link) {
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  x.onload = render2;
+  x.src = link; // Set source path
+} 
+
+// context.clearRect(0, 0, 800, 800);
 
 function render() {
   //draw background image
-  ctx.drawImage(img, 200, 200);
+  ctx.drawImage(x, 200, 200);
 
   // highlight section
   ctx.save();
@@ -206,7 +161,7 @@ function render() {
 }
 
 function render2() {
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(x, 200, 200);
   ctx.beginPath() // cordinates generated from https://www.image-map.net/ 
   ctx.moveTo(329,44)
   ctx.lineTo(361,45)
@@ -216,4 +171,8 @@ function render2() {
   ctx.strokeStyle = 'yellow'
   ctx.stroke()
 
+}
+
+function testCanvas() {
+  ctx.fillRect(300, 300, 100, 100);
 }
