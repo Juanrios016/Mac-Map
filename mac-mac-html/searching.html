@@ -49,11 +49,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/mac-map-js/jquery.js"></script>
     
-    <!-- maphilight -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"
-    ></script>
   </head>
   <body>
     <!-- main menu code starts--------------------------------------------------------- -->
@@ -93,7 +88,7 @@
               type="text"
               class="InputRoom"
               size="10"
-              oninput="getRoomNumber()"
+              id = "textbox"
             />
           </form>
 
@@ -107,9 +102,9 @@
             <option value="carn" onClick="buildingChange()">Carnegie</option>
           </select>
           <br /><br />
-          <input class = submit type="submit" value="Submit" onClick="buildingChange()" />
+          <!-- Submit Button-->
+          <input class = submit type="submit" value="Submit" onClick="begin()" />
           <!-- Canvas --> 
-
           <canvas id = "searchCanvas" class="canvas" width="1200" height="1200"></canvas>
       
         </div>
