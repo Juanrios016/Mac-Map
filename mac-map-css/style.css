@@ -132,10 +132,15 @@ background-color: #c74545;
 }
 
 .floors-btn{
-  padding-top: 80px;
+  padding-top: 60px;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   display: inline-flex;
+  
+  width: 20px;
+  height: auto;
+  padding-left: calc(50vw - 210px);
+  /* padding-left: 120px; */
   /* padding-left: calc(100vw /2px); */
 }
 
@@ -238,6 +243,28 @@ display: block;
 #test {
   display: none;
 }
+
+/* ------------- code for resizing the buttons -------------- */
+.lower-floor-btn{
+  margin: 10px;
+}
+.first-floor-btn{
+  margin: 10px;
+}
+
+.second-floor-btn{
+  margin: 10px;
+}
+.third-floor-btn{
+  margin: 10px;
+}
+.fourth-floor-btn{
+  margin: 10px;
+}
+
+
+
+
 @media screen and (max-width: 376px) and (min-width: 0px) {
   body {
     background-color: lightgreen;
