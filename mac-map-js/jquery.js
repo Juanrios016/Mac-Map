@@ -8,11 +8,6 @@ $(document).ready(function() {
   });
 });
 
-// map highlight
-// https://www.image-map.net/
-$(function() {
-    $('.map').maphilight();
-});
 
 $(document).ready(function(){
   $("#JqueryTest").click(function(){

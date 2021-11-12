@@ -1,4 +1,5 @@
-var carnegieLL = [
+// https://www.image-map.net/
+var carnegie = [
     { name: "04", type: "rect", cords: [[248,235],[187,87]]},
     { name: "04E", type: "rect", cords: [[130,35],[198,79]]},
     { name: "04F", type: "rect", cords: [[207,35],[243,76]]},
@@ -17,5 +18,6 @@ var carnegieLL = [
     { name: "07B", type: "rect", cords: [[469,184],[503,273]]},
     { name: "07A", type: "rect", cords: [[428,189],[460,270]]},
     { name: "02", type: "rect", cords: [[359,100],[396,168]]},
-    { name: "02", type: "poly", cords: [[130,203][183,204][182,239][248,240][248,282][130,282]]}
+    { name: "04B", type: "poly", cords: [[130,203][183,204][182,239][248,240][248,282][130,282]]}
 ];
+

@@ -8,6 +8,27 @@ carnegieImages = ["https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2
 humanitiesImages = ["https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421"]; 
 var roomNumber;
 
+var carnegie = [ // temporary fix until I can acces variables from other file 
+  { name: "04", type: "rect", cords: [[248,235],[187,87]]},
+  { name: "04E", type: "rect", cords: [[130,35],[198,79]]},
+  { name: "04F", type: "rect", cords: [[207,35],[243,76]]},
+  { name: "04D", type: "rect", cords: [[129,87],[180,133]]},
+  { name: "04C", type: "rect", cords: [[128,146],[181,195]]},
+  { name: "04H", type: "rect", cords: [[261,41],[293,82]]},
+  { name: "04A", type: "rect", cords: [[256,217],[335,278]]},
+  { name: "04G", type: "rect", cords: [[257,92],[357,130]]},
+  { name: "041", type: "rect", cords: [[300,41],[353,80]]},
+  { name: "03", type: "rect", cords: [[260,186],[291,208]]},
+  { name: "09", type: "rect", cords: [[343,226],[416,275]]},
+  { name: "01", type: "rect", cords: [[363,39],[395,91]]},
+  { name: "05", type: "rect", cords: [[402,40],[500,128]]},
+  { name: "06", type: "rect", cords: [[511,36],[627,179]]},
+  { name: "06B", type: "rect", cords: [[514,185],[628,281]]},
+  { name: "07B", type: "rect", cords: [[469,184],[503,273]]},
+  { name: "07A", type: "rect", cords: [[428,189],[460,270]]},
+  { name: "02", type: "rect", cords: [[359,100],[396,168]]},
+  { name: "04B", type: "poly", cords: [[130,203],[183,204],[182,239],[248,240],[248,282],[130,282]]}
+];
 
 
 function changeImage1L() {
@@ -145,11 +166,9 @@ function loadImage(link) {
   x.src = link; // Set source path
 } 
 
-// context.clearRect(0, 0, 800, 800);
-
 function render() {
   //draw background image
-  ctx.drawImage(x, 200, 200);
+  ctx.drawImage(x, 0, 0);
 
   // highlight section
   ctx.save();
@@ -161,18 +180,50 @@ function render() {
 }
 
 function render2() {
-  ctx.drawImage(x, 200, 200);
-  ctx.beginPath() // cordinates generated from https://www.image-map.net/ 
-  ctx.moveTo(329,44)
-  ctx.lineTo(361,45)
-  ctx.lineTo(360,131)
-  ctx.lineTo(327,130)
-  ctx.closePath();
-  ctx.strokeStyle = 'yellow'
-  ctx.stroke()
-
+  ctx.drawImage(x, 0, 0);
 }
 
 function testCanvas() {
   ctx.fillRect(300, 300, 100, 100);
 }
+
+function findRoom(list, room) {
+  let check = true;
+  for(let index = 0; index < list.length; ++index) { // right now assumes all rooms are rectangles, got to fix that. 
+    if (list[index].name == room) {
+      drawRectangle(list[index]);
+      check = false;
+    }
+  }
+  if (check) {
+    alert('Room Not Found');
+  }
+}
+
+function drawRectangle(room) { // might want to redraw the image or have some way of clearing the rectangle. 
+ctx.fillRect(room.cords[0][0], room.cords[0][1], room.cords[1][0]-room.cords[0][0], room.cords[1][1]-room.cords[0][1]);
+}
+
+function begin() { // need to have a way to change the floor of the building based on the cordinate or have some sort of check for that 
+  let building = document.getElementById("build").value;
+  let room = document.getElementById("textbox").value;
+  if (building == "carn") {
+    findRoom(carnegie, room);
+  }
+  if (building == "library") {
+    alert("We have not implemented this building yet");
+
+  }
+  if (building == "hum") {
+    alert("We have not implemented this building yet");
+
+  }
+  if (building == "orl") {
+    alert("We have not implemented this building yet");
+
+  }
+
+
+}
+
+
