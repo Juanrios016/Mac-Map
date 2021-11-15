@@ -18,7 +18,7 @@ var carnegie = [
     { name: "07B", type: "rect", cords: [[469,184],[503,273]]},
     { name: "07A", type: "rect", cords: [[428,189],[460,270]]},
     { name: "02", type: "rect", cords: [[359,100],[396,168]]},
-    { name: "04B", type: "poly", cords: [[130,203][183,204][182,239][248,240][248,282][130,282]]}
+    { name: "04B", type: "poly", cords: [[130,203],[183,204],[182,239],[248,240],[248,282],[130,282]]}
 ];
 
 
@@ -66,3 +66,65 @@ var carnegie_second = [
     { name: "207G", type: "rect", cords: [[490, 242],[536, 295]]}, /**  490, 242, 536, 295*/
 
 ]
+var basement = [
+    {name: "04E", type: "rect", cords: [[129,32],[202,83]]},
+    {name: "04F", type: "rect", cords: [[205,33],[248,83]]},
+    {name: "04D", type: "rect", cords: [[129,87],[183,136]]},
+    {name: "04C", type: "rect", cords: [[129,140],[183,197]]},
+    {name: "04", type: "rect", cords: [[186,86],[248,237]]},
+    {name: "04H", type: "rect", cords: [[255,37],[295,86]]},
+    {name: "04I", type: "rect", cords: [[298,37],[359,87]]},
+    {name: "04G", type: "rect", cords: [[254,89],[359,134]]},
+    {name: "05", type: "rect", cords: [[401,37],[505,133]]},
+    {name: "06", type: "rect", cords: [[512,32],[631,182]]},
+    {name: "04A", type: "rect", cords: [[255,213],[335,274]]},
+    {name: "03", type: "rect", cords: [[260,184],[294,210]]},
+    {name: "01", type: "rect", cords: [[362,99],[398,37]]},
+    {name: "07A", type: "rect", cords: [[425,184],[462,280]]},
+    {name: "07B", type: "rect", cords: [[505,184],[466,280]]},
+    {name: "06B", type: "rect", cords: [[631,284],[617,273]]},
+    {name: "04B", type: "poly", cords: [[129,201],[182,201],[182,241],[248,241],[248,284],[129,284]]},
+    {name: "09", type: "rect", cords: [[342,223],[364,222],[363,170],[396,170],[396,223],[418,223],[418,281],[342,281]]},
+    {name: "02", type: "rect", cords: [[256,141],[256,176],[505,176],[505,140],[398,140],[397,101],[361,101],[362,140]]}
+];
+
+var humanities1 = [
+    {name: "100B", type: "rect", cords: [[34,26],[68,80]]},
+    {name: "100C", type: "rect", cords: [[71,25],[127,59]]},
+    {name: "100", type: "rect", cords: [[70,63],[126,81]]},
+    {name: "100D", type: "rect", cords: [[129,27],[160,81]]},
+    {name: "101", type: "rect", cords: [[164,27],[197,81]]},
+    {name: "102", type: "rect", cords: [[201,27],[260,81]]},
+    {name: "103", type: "rect", cords: [[263,26],[297,81]]},
+    {name: "104", type: "rect", cords: [[300,26],[333,81]]},
+    {name: "106", type: "rect", cords: [[336,26],[380,56]]},
+    {name: "105", type: "rect", cords: [[336,59],[380,81]]},
+    {name: "107A", type: "rect", cords: [[427,26],[460,74]]},
+    {name: "107B", type: "rect", cords: [[463,26],[496,74]]},
+    {name: "107", type: "rect", cords: [[425,77],[496,104]]},
+    {name: "107C", type: "rect", cords: [[440,107],[496,150]]},
+    {name: "108A", type: "rect", cords: [[440,226],[497,257]]},
+    {name: "108B", type: "rect", cords: [[463,261],[496,304]]},
+    {name: "108", type: "rect", cords: [[439,271],[462,304]]},
+    {name: "108C", type: "rect", cords: [[442,308],[497,349]]},
+    {name: "108D", type: "rect", cords: [[403,293],[449,351]]},
+    {name: "1C5C", type: "rect", cords: [[413,272],[439,291]]},
+    {name: "1C5B", type: "rect", cords: [[389,274],[412,290]]},
+    {name: "109", type: "rect", cords: [[371,274],[406,350]]},
+    {name: "110", type: "rect", cords: [[303,274],[369,350]]},
+    {name: "111", type: "rect", cords: [[234,274],[300,351]]},
+    {name: "112", type: "rect", cords: [[165,274],[231,350]]},
+    {name: "113", type: "rect", cords: [[95,273],[162,351]]},
+    {name: "114A", type: "rect", cords: [[34,287],[93,350]]},
+    {name: "114", type: "rect", cords: [[34,252],[89,286]]},
+    {name: "1C1C", type: "rect", cords: [[34,226],[58,248]]},
+    {name: "100A", type: "rect", cords: [[34,82],[89,115]]},
+    {name: "120", type: "rect", cords: [[116,108],[265,240]]},
+    {name: "117", type: "rect", cords: [[301,108],[267,152]]},
+    {name: "118", type: "rect", cords: [[268,154],[301,194]]},
+    {name: "119", type: "rect", cords: [[267,197],[300,237]]},
+    {name: "115J", type: "rect", cords: [[330,108],[367,148]]},
+    {name: "116", type: "rect", cords: [[304,167],[414,246]]},
+    {name: "115K", type: "rect", cords: [[369,108],[414,164]]},
+    {name: "115L", type: "rect", cords: [[303,119],[328,119],[328,149],[368,149],[369,164],[303,164]]}
+];
