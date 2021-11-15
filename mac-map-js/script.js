@@ -142,11 +142,12 @@ function render2() {
   ctx.drawImage(x, 0, 0);
 }
 
+// Function to find the room and its cordinates from the list of possible cordinates provided
 function findRoom(list, room) {
   let check = true;
-  for(let index = 0; index < list.length; ++index) { // right now assumes all rooms are rectangles, got to fix that. 
+  for(let index = 0; index < list.length; ++index) {  //loops through all the rooms and checks the name to see if it is correct
     if (list[index].name == room) {
-      drawRectangle(list[index]);
+      drawRectangle(list[index]); // right now assumes all rooms are rectangles, got to fix that.
       check = false;
     }
   }
@@ -166,12 +167,14 @@ function drawRectangle(room) {
   ctx.stroke();
 }
 
+
+// Function that is run by clicking the submit button
 function begin() { 
   let building = document.getElementById("build").value;
   let room = document.getElementById("textbox").value;
-  if(room.charAt(0) == floorNumber) {
+  if(room.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
     if (building == "carn") {
-      findRoom(carnegie, room);
+      findRoom(carnegie, room); 
     }
     if (building == "library") {
       alert("We have not implemented this building yet");
@@ -188,6 +191,10 @@ function begin() {
 }
 else {
   alert("Room is not on this floor");
+}
+
+function cleanString(string) {
+  clean
 }
 
 
