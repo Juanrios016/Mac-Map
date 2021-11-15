@@ -1,5 +1,6 @@
 // https://www.image-map.net/
 var carnegie = [
+    //Basement
     { name: "04", type: "rect", cords: [[248,235],[187,87]]},
     { name: "04E", type: "rect", cords: [[130,35],[198,79]]},
     { name: "04F", type: "rect", cords: [[207,35],[243,76]]},
@@ -19,6 +20,8 @@ var carnegie = [
     { name: "07A", type: "rect", cords: [[428,189],[460,270]]},
     { name: "02", type: "rect", cords: [[359,100],[396,168]]},
     { name: "04B", type: "poly", cords: [[130,203][183,204][182,239][248,240][248,282][130,282]]},
+
+    // Floor 3
     { name: "304", type: "rect", cords:[[120,146],[235,269]]},
   { name: "305", type: "rect", cords:[[121,24],[237,144]]},
   { name: "306", type: "rect", cords:[[251,28],[303,102]]},
@@ -36,6 +39,7 @@ var carnegie = [
   { name: "310F", type: "rect", cords:[[537,215],[605,265]]},
   { name: "310G", type: "rect", cords:[[490,219],[530,264]]},
   { name: "310", type: "rect", cords:[[490,90],[549,211]]},
+  //Floor 4
   { name: "403", type: "rect", cords:[[233,167],[261,197]]},
   { name: "404", type: "rect", cords: [[101,115],[219,205]]},
   { name: "404A", type: "rect", cords:[[102,208],[216,268]]},

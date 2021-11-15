@@ -4,8 +4,6 @@ const input = document.querySelector("Room");
 
 var roomNumber;
 var floorNumber; 
-
-
   
 function changeImage1L() {
   var e1 = document.getElementById("build").value;
