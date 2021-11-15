@@ -2,10 +2,6 @@ const btn = document.querySelector("button"); // Get the button from the page
 const input = document.querySelector("Room");
 // Detect clicks on the button
 
-libraryImages = ["https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor2.png?v=1632164261836", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor3.png?v=1632164271313", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor4.png?v=1632164275904"];
-olinRiceImages = ["https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438"];
-carnegieImages = ["https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217","https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232",  "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042", "https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282"];
-humanitiesImages = ["https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471", "https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421"]; 
 var roomNumber;
 var floorNumber; 
 
@@ -45,24 +41,24 @@ var carnegie = [ // temporary fix until I can acces variables from other file
   { name: "310E", type: "rect", cords:[[555,172],[603,212]]},
   { name: "310F", type: "rect", cords:[[537,215],[605,265]]},
   { name: "310G", type: "rect", cords:[[490,219],[530,264]]},
-  { name: "310", type: "rect", cords:[[490,90],[549,211]]}, // I don't understand why but for anything larger than 400 it does not work although 400 is fine.
-  { name: "403", type: "rect", coords:[[233,167],[261,197]]},
-  { name: "404", type: "rect", coords: [[101,115],[219,205]]},
-  { name: "404A", type: "rect", coords:[[102,208],[216,268]]},
-  { name: "404B", type: "rect", coords:[[101,26],[221,111]]},
-  { name: "405", type: "rect", coords:[[234,71],[318,127]]},
-  { name: "407", type: "rect", coords:[[323,71],[363,126]]},
-  { name: "407A", type: "rect", coords:[[224,31],[464,66]]},
-  { name: "409", type: "rect", coords:[[369,71],[451,127]]},
-  { name: "410A", type: "poly", coords:[[471,27],[469,71],[456,69],[456,110],[584,111],[585,25]]},
-  { name: "410", type: "rect", coords:[[505,114],[584,163]]},
-  { name: "401", type: "rect", coords:[[463,112],[504,165]]},
-  { name: "412", type: "rect", coords:[[463,169],[488,202]]},
-  { name: "413", type: "rect", coords:[[380,167],[462,205]]},
-  { name: "413A", type: "rect", coords:[[386,231],[462,266]]},
-  { name: "411A", type: "rect", coords:[[470,234],[585,270]]},
-  { name: "411B", type: "rect", coords:[[466,207],[476,229]]},
-  { name: "411", type: "ploy", coords:[[492,167],[490,203],[478,207],[478,228],[587,230],[582,168]]}
+  { name: "310", type: "rect", cords:[[490,90],[549,211]]},
+  { name: "403", type: "rect", cords:[[233,167],[261,197]]},
+  { name: "404", type: "rect", cords: [[101,115],[219,205]]},
+  { name: "404A", type: "rect", cords:[[102,208],[216,268]]},
+  { name: "404B", type: "rect", cords:[[101,26],[221,111]]},
+  { name: "405", type: "rect", cords:[[234,71],[318,127]]},
+  { name: "407", type: "rect", cords:[[323,71],[363,126]]},
+  { name: "407A", type: "rect", cords:[[224,31],[464,66]]},
+  { name: "409", type: "rect", cords:[[369,71],[451,127]]},
+  { name: "410A", type: "poly", cords:[[471,27],[469,71],[456,69],[456,110],[584,111],[585,25]]},
+  { name: "410", type: "rect", cords:[[505,114],[584,163]]},
+  { name: "401", type: "rect", cords:[[463,112],[504,165]]},
+  { name: "412", type: "rect", cords:[[463,169],[488,202]]},
+  { name: "413", type: "rect", cords:[[380,167],[462,205]]},
+  { name: "413A", type: "rect", cords:[[386,231],[462,266]]},
+  { name: "411A", type: "rect", cords:[[470,234],[585,270]]},
+  { name: "411B", type: "rect", cords:[[466,207],[476,229]]},
+  { name: "411", type: "poly", cords:[[492,167],[490,203],[478,207],[478,228],[587,230],[582,168]]}
   ];
 
   
@@ -187,23 +183,6 @@ window.onclick = function(event) {
   }
 };
 
-function buildingChange() {
-  var e = document.getElementById("build").value;
-  if (e == "carn") {
-      loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
-    return false;
-  }
-  if (e == "library") {
-    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262");
-  }
-  if (e == "hum") {
-    loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247");
-
-  }
-  if (e == "orl") {
-  loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885");
-  }
-}
 
 // canvas api
 const canvas = document.getElementById("searchCanvas");
@@ -215,19 +194,6 @@ function loadImage(link) {
   x.onload = render2;
   x.src = link; // Set source path
 } 
-
-function render() {
-  //draw background image
-  ctx.drawImage(x, 0, 0);
-
-  // highlight section
-  ctx.save();
-  ctx.globalAlpha = 0.5;
-  ctx.fillStyle = "yellow";
-  ctx.fillRect(300, 300, 100, 100);
-  ctx.restore();
-  context.clearRect(0, 0, 800, 800);
-}
 
 function render2() {
   ctx.drawImage(x, 0, 0);
@@ -255,11 +221,9 @@ function drawRectangle(room) {
   ctx.strokeStyle = "yellow";
   ctx.rect(room.cords[0][0], room.cords[0][1], room.cords[1][0]-room.cords[0][0], room.cords[1][1]-room.cords[0][1]);
   ctx.stroke();
-  // does not work for vaules over 400 not sure why?
-
 }
 
-function begin() { // need to have a way to change the floor of the building based on the cordinate or have some sort of check for that 
+function begin() { 
   let building = document.getElementById("build").value;
   let room = document.getElementById("textbox").value;
   if(room.charAt(0) == floorNumber) {
