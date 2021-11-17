@@ -12,7 +12,6 @@ function changeImage1L() {
       floorNumber = 1;
   }
   if (e1 == "library") {
-    // render;
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605");
     floorNumber = 1;
   }
@@ -126,7 +125,6 @@ window.onclick = function(event) {
   }
 };
 
-
 // canvas api
 const canvas = document.getElementById("searchCanvas");
 const ctx = canvas.getContext('2d');
@@ -134,11 +132,11 @@ var x = new Image();   // Create new img elementoad
 
 function loadImage(link) {
   ctx.clearRect(0,0, canvas.width, canvas.height);
-  x.onload = render2;
+  x.onload = render;
   x.src = link; // Set source path
 } 
 
-function render2() {
+function render() {
   ctx.drawImage(x, 0, 0);
 }
 
@@ -159,7 +157,7 @@ function findRoom(list, search) {
 function drawRectangle(room) { 
   ctx.clearRect(0,0, canvas.width, canvas.height);
   ctx.stroke();
-  render2(); // Redraws the image so we don't highlight multiple rooms.
+  render(); // Redraws the image so we don't highlight multiple rooms.
   ctx.beginPath();
   ctx.lineWidth = "6";
   ctx.strokeStyle = "yellow";

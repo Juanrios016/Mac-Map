@@ -26,6 +26,7 @@ See if you can cross-reference the rules in this file with the elements in index
   display: flex; 
   flex-wrap: wrap;
   z-index: 1000;
+  border-bottom: 1px solid #000000;
 }
 
 /* button toggle menu */
@@ -78,7 +79,6 @@ See if you can cross-reference the rules in this file with the elements in index
   font-size: 14px;
   white-space: nowrap;
   opacity: 0.5;
-  /* opacity: 0; */
   transition:  all 0.3s ease-in-out;
 }
 
@@ -92,7 +92,6 @@ See if you can cross-reference the rules in this file with the elements in index
   font-family: Helvetica;
   font-size: 14px;
   white-space: nowrap;
-  /* opacity: 0; */
   transition:  all 0.3s ease-in-out;
 
 }
@@ -111,7 +110,6 @@ body {
 background-color: var(--color-bg);
 }
 
-
 /* Page structure */
 .wrapper {
 min-height: var(--wrapper-height);
@@ -120,28 +118,14 @@ place-items: center;
 margin: 0 1rem;
 }
 
-.topnav {
-overflow: hidden;
-width: 112px;
-}
-
-
-
-.topnav:hover {
-background-color: #c74545;
-}
-
 .floors-btn{
   padding-top: 60px;
   align-items: center;
-  /* justify-content: center; */
   display: inline-flex;
-  
   width: 20px;
   height: auto;
   padding-left: calc(50vw - 210px);
-  /* padding-left: 120px; */
-  /* padding-left: calc(100vw /2px); */
+  font-weight: bold;
 }
 
 .content {
@@ -267,7 +251,7 @@ display: block;
 
 @media screen and (max-width: 376px) and (min-width: 0px) {
   body {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
   }
   .nav-main .title{
     display: block;
@@ -312,6 +296,125 @@ display: block;
   .illustration{
     width: 300px;
     height: auto;
+  }
+  .lower-floor-btn{
+    visibility: hidden;
+  }
+  .lower-floor-btn:after{
+    content: 'LL';
+    visibility: visible;
+    display: block;
+    position:absolute;
+    top: 80px;
+    left: 20px;
+    background-color: #f98f39;;
+    border: 1px solid #1b1b1b;
+    border-radius: 200px;
+    padding: 8px;
+    width: 10px;
+    height: auto;
+    font-size: 10px;
+    font-weight: bolder;
+    
+  }
+  .first-floor-btn{
+    visibility: hidden;
+  }
+  .first-floor-btn:after{
+    content: 'L1';
+    visibility: visible;
+    display:flex;
+    /* position: absolute; */
+    position:absolute;
+    top: 125px;
+    left: 20px;
+    background-color: #f98f39;;
+    border: 1px solid #1b1b1b;
+    border-radius: 200px;
+    padding: 8px;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bolder;
+    
+  }
+  .second-floor-btn{
+    visibility: hidden;
+  }
+  .second-floor-btn:after{
+    content: 'L2';
+    visibility: visible;
+    display: block;
+    /* position: absolute; */
+    position:absolute;
+    top: 170px;
+    left: 20px;
+    background-color: #f98f39;
+    border: 1px solid #1f1d1d;
+    border-radius: 200px;
+    padding: 8px;
+    width: 10px;
+    height: auto;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .third-floor-btn{
+    visibility: hidden;
+  }
+  .third-floor-btn:after{
+    content: 'L3';
+    visibility: visible;
+    display: block;
+    /* position: absolute; */
+    position:absolute;
+    top: 215px;
+    left: 20px;
+    background-color: #f98f39;;
+    border: 1px solid #1b1b1b;
+    border-radius: 200px;
+    padding: 8px;
+    width: 10px;
+    height: auto;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .fourth-floor-btn{
+    visibility: hidden;
+  }
+  .fourth-floor-btn:after{
+    content: 'L4';
+    visibility: visible;
+    display: block;
+    position:absolute;
+    top: 260px;
+    left: 20px;
+    background-color: #f98f39;;
+    border: 1px solid #1b1b1b;
+    border-radius: 200px;
+    padding: 8px;
+    width: 10px;
+    height: auto;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  .floors-btn{
+  align-items: center;
+  justify-content: center;
+  /* position: inherit; */
+  display:list-item;
+  /* height: 40px; */
+  /* top: 150px; */
+  width: 20px;
+  height:250px;
+  left: 0px;
+  position: fixed;
+  display: flex; 
+  flex-wrap: wrap;
+  z-index: 20;
+  
+  }
+  .content{
+    padding-left: 25px;
   }
 
 }
