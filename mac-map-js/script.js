@@ -145,8 +145,16 @@ function findRoom(list, search) {
   let check = true;
   for(let index = 0; index < list.length; ++index) {  //loops through all the rooms and checks the name to see if it is correct
     if (list[index].name == search) {
-      drawRectangle(list[index]); // right now assumes all rooms are rectangles, got to fix that.
-      check = false;
+      if(list[index].type == "rect") {
+        drawRectangle(list[index]); 
+        check = false;
+      }
+      else {
+        drawPolygon(list[index]);
+        check = false;
+      }
+      
+      
     }
   }
   if (check) {
@@ -165,6 +173,22 @@ function drawRectangle(room) {
   ctx.stroke();
 }
 
+function drawPolygon(room) { 
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.stroke();
+  render(); // Redraws the image so we don't highlight multiple rooms.
+  let cordinates = room.cords;
+  ctx.beginPath();
+  ctx.lineWidth = "6";
+  ctx.strokeStyle = "yellow";
+  ctx.moveTo(cordinates[0][0], cordinates[0][1]);
+  for(let index = 0; index < cordinates.length; ++index) { 
+    ctx.lineTo(cordinates[index][0], cordinates[index][1]);
+  }
+  ctx.lineTo(cordinates[0][0], cordinates[0][1]);
+  ctx.stroke();
+
+}
 
 // Function that is run by clicking the submit button
 function begin() { 
