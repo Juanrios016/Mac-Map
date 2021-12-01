@@ -4,6 +4,7 @@ const input = document.querySelector("Room");
 
 var roomNumber;
 var floorNumber; 
+
 var floor1L;
   
 function changeImage1L() {
@@ -149,6 +150,10 @@ function loadImage(link) {
   ctx.clearRect(0,0, canvas.width, canvas.height);
   x.onload = render;
   x.src = link; // Set source path
+  // currentImageX = x.height;
+  // currentImageY = x.height;
+  // alert(x.height);
+  // alert(x.width);
 } 
 
 function render() {
@@ -241,26 +246,20 @@ function resize(building) {
   //find origional size of image
   //find current size of image 
   // return current/origional 
-  var img = document.getElementById('imageid'); 
-  var origionalCords = [0,0];
+  var origionalCords = [0,0]; 
   if (building == "carn") {
     origionalCords = carnegieOrigionalCords[floorNumber];
   }
   if (building == "library") {
     alert("We have not implemented this building yet");
-
   }
   if (building == "hum") {
     origionalCords = humanitiesOrigionalCords[floorNumber];
-
   }
   if (building == "orl") {
     alert("We have not implemented this building yet");
     //origionalCords = olinriceOrigionalCords[floorNumber]
-
   }
-
-
 }
 
 var carnegieOrigionalCords = [[732,420],[678,415],[710,437],[697,398],[676,404]];
