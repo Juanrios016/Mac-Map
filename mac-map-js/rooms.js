@@ -266,7 +266,7 @@ var humanities = [
     {name: "418", type: "rect", cords: [[448,125],[464,154]]},
     {name: "425", type: "rect", cords: [[422,118],[443,131]]},
     {name: "403", type: "rect", cords: [[465,121],[504,158]]},
-    {name: "403A", type: "rect", cords: [[447,84],[505,119]]},
+    {name: "403A", type: "rect", cords: [[447,84],[505,119]]}
 ];
 
 var orl = [
