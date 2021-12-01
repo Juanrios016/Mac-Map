@@ -53,7 +53,7 @@ let toggleNav = function(){
     }
 
     else if (toggleNavStatus === true){
-        getSidebar.style.width = "50px";
+        getSidebar.style.width = "60px";
         getSidebarTitle.style.opaciity = "0";
 
         // array where links for menu are store

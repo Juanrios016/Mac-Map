@@ -4,14 +4,28 @@ const input = document.querySelector("Room");
 
 var roomNumber;
 var floorNumber; 
-var currentImageX;
-var currentImageY;
+
+var floor1L;
   
 function changeImage1L() {
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-      loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
+    if(screen.width < 377){
+      let img;
+      let url = 'https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147';
+        
+        loadImage(url, img => {
+          image(img, 100, 100);
+        } );
+      }
+
+
+      else{
+      floor1L = loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
       floorNumber = 1;
+      }
+
+
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605");
