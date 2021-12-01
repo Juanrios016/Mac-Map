@@ -188,7 +188,7 @@ function drawRectangle(room) {
   render(); // Redraws the image so we don't highlight multiple rooms.
   ctx.beginPath();
   ctx.lineWidth = "6";
-  ctx.strokeStyle = "yellow";
+  ctx.strokeStyle = "red";
   ctx.rect(room.cords[0][0], room.cords[0][1], room.cords[1][0]-room.cords[0][0], room.cords[1][1]-room.cords[0][1]);
   ctx.stroke();
 }
