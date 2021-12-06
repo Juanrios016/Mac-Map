@@ -144,12 +144,13 @@ window.onclick = function(event) {
 // canvas api
 const canvas = document.getElementById("searchCanvas");
 const ctx = canvas.getContext('2d');
-var x = new Image();   // Create new img elementoad
+var map = new Image();   // Create new img elementoad
 
 function loadImage(link) {
   ctx.clearRect(0,0, canvas.width, canvas.height);
-  x.onload = render;
-  x.src = link; // Set source path
+  map.onload = render;
+  map.src = link; 
+  // Set source path
   // currentImageX = x.height;
   // currentImageY = x.height;
   // alert(x.height);
@@ -157,7 +158,7 @@ function loadImage(link) {
 } 
 
 function render() {
-  ctx.drawImage(x, 0, 0);
+  ctx.drawImage(map, 0, 0);
 }
 
 // Function to find the room and its cordinates from the list of possible cordinates provided
@@ -210,13 +211,17 @@ function drawPolygon(room) {
 
 }
 
-// Function that is run by clicking the submit button
+/** 
+ * Function that is run by clicking the submit button to render floor image and
+ * to highlighting part based on the input and building selection.
+ */ 
 function begin() { 
   let building = document.getElementById("build").value;
   let search = document.getElementById("textbox").value;
   search = cleanString(search);
-  if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
+  // if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
     if (building == "carn") {
+      selectBuilding();
       findRoom(carnegie, search); 
     }
     if (building == "library") {
@@ -224,6 +229,7 @@ function begin() {
 
     }
     if (building == "hum") {
+      selectBuilding();
       findRoom(humanities, search); 
 
     }
@@ -231,9 +237,10 @@ function begin() {
       alert("We have not implemented this building yet");
 
     }
-}
-else {
-  alert("Room is not on this floor");
+  // }
+  // else {
+  //   alert("Room is not on this floor");
+  // }
 }
 
 function cleanString(string) {
@@ -262,12 +269,28 @@ function resize(building) {
   }
 }
 
-var carnegieOrigionalCords = [[732,420],[678,415],[710,437],[697,398],[676,404]];
-var humanitiesOrigionalCords = [[0,0],[540,403],[713,378],[575,415],[539,391]];
-var olinriceOrigionalCords =[[0,0],[683,367],[665,386],[644,360],[669,374]];
+/**
+ * automaticallr shows floor plan based on the input on the "textbox" 
+ */
+function selectBuilding(){
+  let search = document.getElementById("textbox").value;
+  search = cleanString(search);
 
-
-
+  if(search.charAt(0) == 0){
+    changeImageLL();
+  }
+  else if(search.charAt(0) == 1){
+    changeImage1L();
+  }
+  else if(search.charAt(0) == 2){
+    changeImage2L();
+  }
+  else if(search.charAt(0) == 3){
+    changeImage3L();
+  }
+  else{
+    changeImage4L();
+  }
 }
 
 
