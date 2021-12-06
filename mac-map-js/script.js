@@ -234,7 +234,7 @@ function begin() {
 
     }
     if (building == "orl") {
-      alert("We have not implemented this building yet");
+      findRoom(orl, search);
 
     }
   // }
