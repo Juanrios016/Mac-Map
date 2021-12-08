@@ -219,9 +219,9 @@ function begin() {
   let building = document.getElementById("build").value;
   let search = document.getElementById("textbox").value;
   search = cleanString(search);
-  // if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
+  if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
     if (building == "carn") {
-      selectBuilding();
+      // selectBuilding();
       findRoom(carnegie, search); 
     }
     if (building == "library") {
@@ -229,7 +229,7 @@ function begin() {
 
     }
     if (building == "hum") {
-      selectBuilding();
+      // selectBuilding();
       findRoom(humanities, search); 
 
     }
@@ -237,10 +237,10 @@ function begin() {
       findRoom(orl, search);
 
     }
-  // }
-  // else {
-  //   alert("Room is not on this floor");
-  // }
+  }
+  else {
+    alert("Room is not on this floor");
+  }
 }
 
 function cleanString(string) {
