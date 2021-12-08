@@ -4,7 +4,6 @@ const input = document.querySelector("Room");
 
 var roomNumber;
 var floorNumber; 
-
 var floor1L;
   
 function changeImage1L() {
@@ -18,14 +17,10 @@ function changeImage1L() {
           image(img, 100, 100);
         } );
       }
-
-
       else{
       floor1L = loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
       floorNumber = 1;
       }
-
-
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605");
@@ -219,28 +214,23 @@ function begin() {
   let building = document.getElementById("build").value;
   let search = document.getElementById("textbox").value;
   search = cleanString(search);
-  // if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
+  if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
     if (building == "carn") {
-      selectBuilding();
       findRoom(carnegie, search); 
     }
     if (building == "library") {
       alert("We have not implemented this building yet");
-
     }
     if (building == "hum") {
-      selectBuilding();
       findRoom(humanities, search); 
-
     }
     if (building == "orl") {
       findRoom(orl, search);
-
     }
-  // }
-  // else {
-  //   alert("Room is not on this floor");
-  // }
+  }
+  else {
+    alert("Room is not on this floor");
+  }
 }
 
 function cleanString(string) {
@@ -249,48 +239,7 @@ function cleanString(string) {
   return cleanedString;
 }
 
-function resize(building) {
-  //find origional size of image
-  //find current size of image 
-  // return current/origional 
-  var origionalCords = [0,0]; 
-  if (building == "carn") {
-    origionalCords = carnegieOrigionalCords[floorNumber];
-  }
-  if (building == "library") {
-    alert("We have not implemented this building yet");
-  }
-  if (building == "hum") {
-    origionalCords = humanitiesOrigionalCords[floorNumber];
-  }
-  if (building == "orl") {
-    alert("We have not implemented this building yet");
-    //origionalCords = olinriceOrigionalCords[floorNumber]
-  }
-}
 
-/**
- * automaticallr shows floor plan based on the input on the "textbox" 
- */
-function selectBuilding(){
-  let search = document.getElementById("textbox").value;
-  search = cleanString(search);
 
-  if(search.charAt(0) == 0){
-    changeImageLL();
-  }
-  else if(search.charAt(0) == 1){
-    changeImage1L();
-  }
-  else if(search.charAt(0) == 2){
-    changeImage2L();
-  }
-  else if(search.charAt(0) == 3){
-    changeImage3L();
-  }
-  else{
-    changeImage4L();
-  }
-}
 
 

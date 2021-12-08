@@ -144,9 +144,7 @@ body{
 if we are referring back to an id, we use #variable */
 
 @media screen and (max-width: 768px) and (min-width: 377px) {
-  body {
-    background-color: yellow;
-  }
+
   .nav-main .title{
     display: block;
     /* text-align: center; */
@@ -213,9 +211,7 @@ if we are referring back to an id, we use #variable */
 }
 
 @media screen and (max-width: 376px) and (min-width: 0px) {
-  body {
-    background-color: lightgreen;
-  }
+
   .nav-main .title{
     display: block;
     position: center;
