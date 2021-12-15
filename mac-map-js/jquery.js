@@ -9,8 +9,8 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function(){
-  $("#JqueryTest").click(function(){
-    $("img").hide();
-  });
-});
+// $(document).ready(function(){
+//   $("#JqueryTest").click(function(){
+//     $("img").hide();
+//   });
+// });

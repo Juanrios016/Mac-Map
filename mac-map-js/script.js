@@ -9,11 +9,11 @@ var floor1L;
 function changeImage1L() {
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    if(screen.width < 377){
+    if(screen.width < 377){ // h
       let img;
       let url = 'https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147';
         
-        loadImage(url, img => {
+        loadImage(url, img => { 
           image(img, 100, 100);
         } );
       }
@@ -110,10 +110,10 @@ function changeImage4L() {
   }
 }
 
-function getRoomNumber() {
-  roomNumber = document.getElementById("InputRoom").value;
-  document.getElementById("roomDisplay").innerHTML = roomNumber;
-}
+// function getRoomNumber() {
+//   roomNumber = document.getElementById("InputRoom").value;
+//   document.getElementById("roomDisplay").innerHTML = roomNumber;
+// }
 
 
 /* When the user clicks on the button,
@@ -165,9 +165,12 @@ function findRoom(list, search) {
         drawRectangle(list[index]); 
         check = false;
       }
-      else {
+      else if(list[index].type == "poly") {
         drawPolygon(list[index]);
         check = false;
+      }
+      else {
+        alert("not a polygon or rectangle???")
       }
       
       
@@ -184,7 +187,7 @@ function drawRectangle(room) {
   render(); // Redraws the image so we don't highlight multiple rooms.
   ctx.beginPath();
   ctx.lineWidth = "6";
-  ctx.strokeStyle = "red";
+  ctx.strokeStyle = "yellow";
   ctx.rect(room.cords[0][0], room.cords[0][1], room.cords[1][0]-room.cords[0][0], room.cords[1][1]-room.cords[0][1]);
   ctx.stroke();
 }
