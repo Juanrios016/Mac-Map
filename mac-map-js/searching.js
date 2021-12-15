@@ -10,7 +10,7 @@ let toggleNav = function(){
     let getSidebarTitle = document.querySelector(".nav-sidebar span");
     let getSidebarlinks = document.querySelectorAll(".nav-sidebar a");
 
-    if(toggleNavStatus === false && screen.width < 377){
+    if(toggleNavStatus === false && screen.width < 420){
         
         getSidebarUL.style.visibility = "visible";
         getSidebar.style.width = "160px";
@@ -38,7 +38,7 @@ let toggleNav = function(){
         toggleNavStatus = true;
     }
     
-    else if (toggleNavStatus === true && screen.width < 377){
+    else if (toggleNavStatus === true && screen.width < 420){
         getSidebar.style.width = "0px";
         getSidebarTitle.style.opaciity = "0";
 
