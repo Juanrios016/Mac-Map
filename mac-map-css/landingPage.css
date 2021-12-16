@@ -210,7 +210,7 @@ if we are referring back to an id, we use #variable */
   }
 }
 
-@media screen and (max-width: 376px) and (min-width: 0px) {
+@media screen and (max-width: 420px) and (min-width: 0px) {
 
   .nav-main .title{
     display: block;
@@ -264,6 +264,9 @@ if we are referring back to an id, we use #variable */
   .steps-title{
     padding-top: 0;
     font-size: 16px;
+  }
+  .nav-sidebar{
+    top: 40px;
   }
 }
 

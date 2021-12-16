@@ -7,9 +7,9 @@ var floorNumber;
 var currentBuilding;
   
 function changeImage1L() {
+  document.getElementById('searchCanvas').style.visibility = "visible";
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {      
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
     floorNumber = 1;
     currentBuilding = "Carnegie";
@@ -25,7 +25,6 @@ function changeImage1L() {
   }
   
   if (e1 == "hum") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247");
     floorNumber = 1;
     currentBuilding = "Humanities";
@@ -34,7 +33,6 @@ function changeImage1L() {
 
   }
   if (e1 == "orl") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885");
     floorNumber = 1;
     currentBuilding = "Olin Rice";
@@ -45,9 +43,9 @@ function changeImage1L() {
 }
 
 function changeImageLL() { // Change images for the lower level
+  document.getElementById('searchCanvas').style.visibility = "visible";
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
     floorNumber = 0;
     currentBuilding = "Carnegie";
@@ -55,22 +53,23 @@ function changeImageLL() { // Change images for the lower level
     element.innerHTML = currentBuilding.concat(" ", "Lower Level");
   }
   else if (e1 == "library") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262");
     floorNumber = 0;
   }
   else{
-    document.getElementById('searchCanvas').style.visibility = "hidden";
     const element = document.getElementById("current-floor");
     element.innerHTML = "No Lower Level";
+    document.getElementById('searchCanvas').style.visibility = "hidden";
+
 
   }
 }
 
-function changeImage2L() { // Changes iamges for the second floor 
+function changeImage2L() { // Changes iamges for the second floor
+  document.getElementById('searchCanvas').style.visibility = "visible";
+ 
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232");
     floorNumber = 2;
     currentBuilding = "Carnegie";
@@ -82,7 +81,6 @@ function changeImage2L() { // Changes iamges for the second floor
     floorNumber = 2;
   }
   if (e1 == "hum") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481");
     floorNumber = 2;
     currentBuilding = "Humanities";
@@ -91,7 +89,6 @@ function changeImage2L() { // Changes iamges for the second floor
 
   }
   if (e1 == "orl") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941");
     floorNumber = 2;
     currentBuilding = "Olin Rice";
@@ -101,9 +98,10 @@ function changeImage2L() { // Changes iamges for the second floor
 }
 
 function changeImage3L() { // Changes iamges for the third floor 
+  document.getElementById('searchCanvas').style.visibility = "visible";
+
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042");
     floorNumber = 3;
     currentBuilding = "Carnegie";
@@ -115,7 +113,6 @@ function changeImage3L() { // Changes iamges for the third floor
     floorNumber = 3;
   }
   if (e1 == "hum") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471");
     floorNumber = 3;
     currentBuilding = "Humanities";
@@ -124,7 +121,6 @@ function changeImage3L() { // Changes iamges for the third floor
 
   }
   if (e1 == "orl") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465");
     floorNumber = 3;
     currentBuilding = "Olin Rice";
@@ -134,10 +130,11 @@ function changeImage3L() { // Changes iamges for the third floor
 }
 
 function changeImage4L() { // Changes images for the fourth floor 
+  document.getElementById('searchCanvas').style.visibility = "visible";
+
   var e1 = document.getElementById("build").value;
 
   if (e1 == "carn") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
       loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282");
       floorNumber = 4;
       currentBuilding = "Carnegie";
@@ -149,7 +146,6 @@ function changeImage4L() { // Changes images for the fourth floor
       floorNumber = 4;
   }
   if (e1 == "hum") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421");
     floorNumber = 4;
     currentBuilding = "Humanities";
@@ -157,7 +153,6 @@ function changeImage4L() { // Changes images for the fourth floor
     element.innerHTML = currentBuilding.concat(" ", "Fourth Floor");
   }
   if (e1 == "orl") {
-    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438");
     floorNumber = 4;
     currentBuilding = "Olin Rice";
