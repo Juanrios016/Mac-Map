@@ -100,10 +100,10 @@ body {
 background-color: var(--color-bg);
 }
 
-#searchCanvas{
+/* #searchCanvas{
   width: 1200px;
   height: 800px;
-}
+} */
 
 /* Page structure */
 .wrapper {
@@ -219,6 +219,7 @@ display: block;
 
 #test {
   display: none;
+  
 }
 
 /* ------------- code for resizing the buttons -------------- */
@@ -248,6 +249,8 @@ display: block;
   /* position:fixed;  */
   top: 500px;
   /* left: 720px; */
+  width: 1200px;
+  height: 800px;
 }
 .start-searching-button{
   padding: 15px;
@@ -502,7 +505,8 @@ display: block;
 
 @media screen and (max-width: 1800px) and (min-width: 769px) {
   #searchCanvas{
-    width: calc(100vw - 100px);
+    width: calc(100vw - 400px);
     height: auto;
+    left:400px;
   }
 }
