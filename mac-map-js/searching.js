@@ -1,3 +1,5 @@
+/**Class for handling the menu actions on the searching page*/
+
 let toggleNavStatus = false;
 
 // making menu bar to work
@@ -53,7 +55,7 @@ let toggleNav = function(){
     }
 
     else if (toggleNavStatus === true){
-        getSidebar.style.width = "60px";
+        getSidebar.style.width = "50px";
         getSidebarTitle.style.opaciity = "0";
 
         // array where links for menu are store

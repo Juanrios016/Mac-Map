@@ -4,37 +4,32 @@ const input = document.querySelector("Room");
 
 var roomNumber;
 var floorNumber; 
-var floor1L;
-
-//Changees the images for the first floor button
+var currentBuilding;
+  
 function changeImage1L() {
-  var e1 = document.getElementById("build").value; // checks to see what building is selected
-  if (e1 == "carn") {
-    if(screen.width < 377){ // h
-      let img;
-      let url = 'https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147';
-        
-        loadImage(url, img => { 
-          image(img, 100, 100);
-        } );
-      }
-      else{
-      floor1L = loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
-      floorNumber = 1;
-      }
+  var e1 = document.getElementById("build").value;
+  if (e1 == "carn") {      
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
+    floorNumber = 1;
+    currentBuilding = "carn";
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605");
     floorNumber = 1;
+    
   }
   
   if (e1 == "hum") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247");
     floorNumber = 1;
+    currentBuilding = "hum";
+
   }
   if (e1 == "orl") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885");
     floorNumber = 1;
+    currentBuilding = "orl";
+
   }
 }
 
@@ -43,6 +38,7 @@ function changeImageLL() { // Change images for the lower level
   if (e1 == "carn") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
     floorNumber = 0;
+    currentBuilding = "carn";
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262");
@@ -55,6 +51,7 @@ function changeImage2L() { // Changes iamges for the second floor
   if (e1 == "carn") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232");
     floorNumber = 2;
+    currentBuilding = "carn";
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor2.png?v=1632164261836");
@@ -63,18 +60,22 @@ function changeImage2L() { // Changes iamges for the second floor
   if (e1 == "hum") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481");
     floorNumber = 2;
+    currentBuilding = "hum";
+
   }
   if (e1 == "orl") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941");
     floorNumber = 2;
+    currentBuilding = "orl";
   }
 }
 
 function changeImage3L() { // Changes iamges for the third floor 
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
-  loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042");
-  floorNumber = 3;
+    loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042");
+    floorNumber = 3;
+    currentBuilding = "carn";
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor3.png?v=1632164271313");
@@ -83,10 +84,13 @@ function changeImage3L() { // Changes iamges for the third floor
   if (e1 == "hum") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471");
     floorNumber = 3;
+    currentBuilding = "hum";
+
   }
   if (e1 == "orl") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465");
     floorNumber = 3;
+    currentBuilding = "orl";
   }
 }
 
@@ -96,6 +100,7 @@ function changeImage4L() { // Changes images for the fourth floor
   if (e1 == "carn") {
       loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282");
       floorNumber = 4;
+      currentBuilding = "carn";
   }
   if (e1 == "library") {
       loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor4.png?v=1632164275904");
@@ -104,10 +109,13 @@ function changeImage4L() { // Changes images for the fourth floor
   if (e1 == "hum") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421");
     floorNumber = 4;
+    currentBuilding = "hum";
   }
   if (e1 == "orl") {
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438");
     floorNumber = 4;
+    currentBuilding = "orl";
+
   }
 }
 
@@ -175,7 +183,7 @@ function drawRectangle(room) {
   render(); // Redraws the image so we don't highlight multiple rooms.
   ctx.beginPath();
   ctx.lineWidth = "6";
-  ctx.strokeStyle = "yellow";
+  ctx.strokeStyle = "red";
   ctx.rect(room.cords[0][0], room.cords[0][1], room.cords[1][0]-room.cords[0][0], room.cords[1][1]-room.cords[0][1]);
   ctx.stroke();
 }
@@ -188,7 +196,7 @@ function drawPolygon(room) {
   let cordinates = room.cords;
   ctx.beginPath();
   ctx.lineWidth = "6";
-  ctx.strokeStyle = "yellow";
+  ctx.strokeStyle = "red";
   ctx.moveTo(cordinates[0][0], cordinates[0][1]);
   for(let index = 0; index < cordinates.length; ++index) { 
     ctx.lineTo(cordinates[index][0], cordinates[index][1]);
@@ -207,7 +215,7 @@ function begin() {
   let search = document.getElementById("textbox").value;
   search = cleanString(search);
   if(search.charAt(0) == floorNumber) { // Checks to see if the room is on the same floor as the one being displayed. 
-    if (building == "carn") {
+    if (building == "carn" ) {
       findRoom(carnegie, search); 
     }
     if (building == "library") {
