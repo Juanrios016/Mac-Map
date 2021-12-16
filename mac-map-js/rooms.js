@@ -1,5 +1,9 @@
 // https://www.image-map.net/
-var carnegie = [
+// rooms are stores in this format 
+//{name:"room name", type:" shape of room, either rectangle (rect), or polygon (poly), 
+// cords: the set of cordinates that dictate the rooms boundarys}
+
+var carnegie = [ // cordinates for the carnegie building 
     //Basement
     { name: "04", type: "rect", cords: [[248,235],[187,87]]},
     { name: "04E", type: "rect", cords: [[130,35],[198,79]]},
@@ -96,7 +100,7 @@ var carnegie = [
   { name: "411", type: "poly", cords:[[492,167],[490,203],[478,207],[478,228],[587,230],[582,168]]}
 ];
 
-var humanities = [
+var humanities = [ // cordiantes for the humantities building 
     //Basement
     {name: "04E", type: "rect", cords: [[129,32],[202,83]]},
     {name: "04F", type: "rect", cords: [[205,33],[248,83]]},
@@ -232,7 +236,7 @@ var humanities = [
     {name: "303A", type: "rect", cords: [[363,21],[393,90]]}, 
     {name: "301C", type: "rect", cords: [[147,24],[174,91]]}, 
     {name: "318", type: "rect", cords: [[178,289],[471,309]]}, 
-    //{name: "311" , type: "poly", cords: [[34,245],[68,243],[69,268],[102,274],[103,309],[36,307]]},
+    {name: "311" , type: "poly", cords: [[34,245],[68,243],[69,268],[102,274],[103,309],[36,307]]},
     {name: "306", type: "poly", cords: [[501,244],[501,257],[475,260],[472,273],[542,272],[545,167],[521,171],[521,238]]},
 
     //floor 4
@@ -269,7 +273,7 @@ var humanities = [
     {name: "403A", type: "rect", cords: [[447,84],[505,119]]}
 ];
 
-var orl = [
+var orl = [ // cordiantes for oline rice
  // floor 1
     {name:"141", type:"rect", cords:[[430,112],[459,153]]},
     {name:"142", type:"rect", cords:[[462,110],[490,150]]},
@@ -458,7 +462,7 @@ var orl = [
      {name:"249A", type:"rect", cords:[[600,128],[610,152]]},
      {name:"249C", type:"rect", cords:[[585,121],[594,152]]},
      {name:"247", type:"rect", cords:[[565,122],[583,164]]},
-    {name:"249", type:"poly", cords:[[587,156],[630,157],[631,179],[601,178],[602,165],[587,162]]},
+     {name:"249", type:"poly", cords:[[587,156],[630,157],[631,179],[601,178],[602,165],[587,162]]},
      {name:"245", type:"rect", cords:[[518,119],[561,166]]},
      {name:"243", type:"rect", cords:[[464,122],[513,165]]},
      {name:"241", type:"rect", cords:[[391,122],[462,162]]},
@@ -501,9 +505,9 @@ var orl = [
     {name:"363", type: "rect", cords: [[153,244],[191,280]]},
     {name:"364", type: "rect", cords: [[192,245],[230,281]]},
     {name:"365", type: "rect", cords: [[231,246],[268,283]]},
-    {name:"309", type: "rect", cords: [[270,247,290,283]]},
-    {name:"310", type: "rect", cords: [[81,320,97,346]]},
-    {name:"311", type: "rect", cords: [[99,320,116,347]]},
+    {name:"309", type: "rect", cords: [[270,247],[290,283]]},
+    {name:"310", type: "rect", cords: [[81,320],[97,346]]},
+    {name:"311", type: "rect", cords: [[99,320],[116,347]]},
     {name:"312", type: "rect", cords: [[116,318],[132,348]]},
     {name:"313", type: "rect", cords: [[134,320],[150,347]]},
     {name:"314", type: "rect", cords: [[153,317],[168,347]]},
@@ -514,7 +518,6 @@ var orl = [
     {name:"319", type: "rect", cords: [[238,319],[256,347]]},
     {name:"320", type: "rect", cords: [[259,319],[288,349]]},
     {name:"301", type: "rect", cords: [[317,114],[358,163]]},
-    {name:"300", type: "circle", cords: [[339,200,26]]},
     {name:"341", type: "rect", cords: [[387,113],[419,158]]},
     {name:"343", type: "rect", cords: [[422,112],[492,160]]},
     {name:"343A", type: "rect", cords: [[494,114],[521,129]]},
@@ -560,33 +563,4 @@ var orl = [
   {name: "403D", type: "rect", cords: [[128,306],[180,315]]},
   {name: "405", type: "rect", cords: [[186,262],[197,281]]},
   {name: "402", type: "poly", cords: [[90,294],[100,293],[100,278],[104,273],[103,262],[90,262]]}
-];
-
-var library = [
-// lower
-  {name: "L07", type: "rect", cords: [[179,19],[325,101]]},
-  {name: "L09", type: "rect", cords: [[419,19],[487,75]]},
-  {name: "L12", type: "rect", cords: [[580,18],[735,76]]},
-  {name: "L15", type: "rect", cords: [[738,40],[818,463]]},
-  {name: "L03A", type: "rect", cords: [[120,465],[174,522]]},
-  {name: "L02", type: "rect", cords: [[178,464],[258,540]]},
-  {name: "L01", type: "rect", cords: [[261,464],[399,541]]},
-  {name: "L03", type: "poly", cords: [[20,185],[177,185],[176,462],[69,461],[67,295],[19,296]]},
-  {name: "L03B", type: "poly", cords: [[67,127],[144,128],[144,165],[177,165],[176,186],[68,183]]},
-// floor 1
-  {name: "106", type: "rect", cords: [[69,345],[183,460]]},
-  {name: "107", type: "rect", cords: [[119,463],[175,518]]},
-  {name: "115", type: "rect", cords: [[182,17],[231,88]]},
-  {name: "116", type: "rect", cords: [[235,17],[285,68]]},
-  {name: "117", type: "rect", cords: [[290,19],[341,67]]},
-  {name: "118", type: "rect", cords: [[345,17],[400,67]]},
-  {name: "123", type: "rect", cords: [[571,18],[622,68]]},
-  {name: "111", type: "poly", cords: [[69,125],[141,126],[141,182],[175,181],[175,292],[139,293],[138,343],[70,342],[69,290],[21,293],[20,183],[68,184]]},
-  {name: "122", type: "poly", cords: [[236,70],[241,123],[762,122],[762,31],[730,31],[732,17],[625,17],[626,71],[573,68],[569,20],[403,18],[403,69]]},
-  {name: "133", type: "poly", cords: [[508,462],[509,576],[569,575],[569,621],[677,618],[679,577],[735,574],[733,487],[703,487],[703,462]]},
-// floor 2
-
-// floor 3
-
-// floor 4
 ];
