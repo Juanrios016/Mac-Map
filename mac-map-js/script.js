@@ -9,26 +9,37 @@ var currentBuilding;
 function changeImage1L() {
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {      
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFirstFloor.png?v=1632508341147");
     floorNumber = 1;
-    currentBuilding = "carn";
+    currentBuilding = "Carnegie";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "First Floor");
   }
   if (e1 == "library") {
+
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor1.png?v=1632164257605");
     floorNumber = 1;
+    
     
   }
   
   if (e1 == "hum") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities1stFloor.png?v=1633620425247");
     floorNumber = 1;
-    currentBuilding = "hum";
+    currentBuilding = "Humanities";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "First Floor");
 
   }
   if (e1 == "orl") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFirstFloor.png?v=1633620660885");
     floorNumber = 1;
-    currentBuilding = "orl";
+    currentBuilding = "Olin Rice";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "First Floor");
 
   }
 }
@@ -36,61 +47,89 @@ function changeImage1L() {
 function changeImageLL() { // Change images for the lower level
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
     floorNumber = 0;
-    currentBuilding = "carn";
+    currentBuilding = "Carnegie";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Lower Level");
   }
-  if (e1 == "library") {
+  else if (e1 == "library") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryLower.png?v=1632164280262");
     floorNumber = 0;
+  }
+  else{
+    document.getElementById('searchCanvas').style.visibility = "hidden";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = "No Lower Level";
+
   }
 }
 
 function changeImage2L() { // Changes iamges for the second floor 
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232");
     floorNumber = 2;
-    currentBuilding = "carn";
+    currentBuilding = "Carnegie";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Second Floor");
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor2.png?v=1632164261836");
     floorNumber = 2;
   }
   if (e1 == "hum") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities2ndfloor.png?v=1633620429481");
     floorNumber = 2;
-    currentBuilding = "hum";
+    currentBuilding = "Humanities";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Second Floor");
 
   }
   if (e1 == "orl") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceSecondFloor.png?v=1633620666941");
     floorNumber = 2;
-    currentBuilding = "orl";
+    currentBuilding = "Olin Rice";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Second Floor");
   }
 }
 
 function changeImage3L() { // Changes iamges for the third floor 
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042");
     floorNumber = 3;
-    currentBuilding = "carn";
+    currentBuilding = "Carnegie";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Third Floor");
   }
   if (e1 == "library") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor3.png?v=1632164271313");
     floorNumber = 3;
   }
   if (e1 == "hum") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities3rdfloor.png?v=1633620433471");
     floorNumber = 3;
-    currentBuilding = "hum";
+    currentBuilding = "Humanities";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Third Floor");
 
   }
   if (e1 == "orl") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceThirdFloor.png?v=1633620670465");
     floorNumber = 3;
-    currentBuilding = "orl";
+    currentBuilding = "Olin Rice";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Third Floor");
   }
 }
 
@@ -98,23 +137,32 @@ function changeImage4L() { // Changes images for the fourth floor
   var e1 = document.getElementById("build").value;
 
   if (e1 == "carn") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
       loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieFourthFloor.png?v=1632508341282");
       floorNumber = 4;
-      currentBuilding = "carn";
+      currentBuilding = "Carnegie";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Fourth Floor");
   }
   if (e1 == "library") {
       loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FLibraryFloor4.png?v=1632164275904");
       floorNumber = 4;
   }
   if (e1 == "hum") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FHumanities4thfloor.png?v=1633620437421");
     floorNumber = 4;
-    currentBuilding = "hum";
+    currentBuilding = "Humanities";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Fourth Floor");
   }
   if (e1 == "orl") {
+    document.getElementById('searchCanvas').style.visibility = "visible";
     loadImage("https://cdn.glitch.me/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FOlinRiceFourthFloor.png?v=1633620674438");
     floorNumber = 4;
-    currentBuilding = "orl";
+    currentBuilding = "Olin Rice";
+    const element = document.getElementById("current-floor");
+    element.innerHTML = currentBuilding.concat(" ", "Fourth Floor");
 
   }
 }

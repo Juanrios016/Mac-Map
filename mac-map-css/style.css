@@ -218,8 +218,7 @@ display: block;
 .show {display:block;}
 
 #test {
-  display: none;
-  
+  display: none; 
 }
 
 /* ------------- code for resizing the buttons -------------- */
@@ -254,6 +253,9 @@ display: block;
 }
 .start-searching-button{
   padding: 15px;
+  padding-top: 50px;
+}
+#current-floor{
   padding-top: 50px;
 }
 
