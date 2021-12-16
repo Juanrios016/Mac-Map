@@ -7,10 +7,3 @@ $(document).ready(function() {
     $(this).addClass('active');
   });
 });
-
-
-// $(document).ready(function(){
-//   $("#JqueryTest").click(function(){
-//     $("img").hide();
-//   });
-// });
