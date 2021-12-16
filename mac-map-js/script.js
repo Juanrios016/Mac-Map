@@ -5,9 +5,10 @@ const input = document.querySelector("Room");
 var roomNumber;
 var floorNumber; 
 var floor1L;
-  
+
+//Changees the images for the first floor button
 function changeImage1L() {
-  var e1 = document.getElementById("build").value;
+  var e1 = document.getElementById("build").value; // checks to see what building is selected
   if (e1 == "carn") {
     if(screen.width < 377){ // h
       let img;
@@ -37,7 +38,7 @@ function changeImage1L() {
   }
 }
 
-function changeImageLL() {
+function changeImageLL() { // Change images for the lower level
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieBasement.png?v=1632508341217");
@@ -49,7 +50,7 @@ function changeImageLL() {
   }
 }
 
-function changeImage2L() {
+function changeImage2L() { // Changes iamges for the second floor 
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
     loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieSecondFloor.png?v=1632508341232");
@@ -69,7 +70,7 @@ function changeImage2L() {
   }
 }
 
-function changeImage3L() {
+function changeImage3L() { // Changes iamges for the third floor 
   var e1 = document.getElementById("build").value;
   if (e1 == "carn") {
   loadImage("https://cdn.glitch.com/dd9514b9-20ff-4bc5-b6b3-d7a1630812d3%2FCarnegieThirdFloor.png?v=1632508341042");
@@ -89,7 +90,7 @@ function changeImage3L() {
   }
 }
 
-function changeImage4L() {
+function changeImage4L() { // Changes images for the fourth floor 
   var e1 = document.getElementById("build").value;
 
   if (e1 == "carn") {
@@ -110,10 +111,6 @@ function changeImage4L() {
   }
 }
 
-// function getRoomNumber() {
-//   roomNumber = document.getElementById("InputRoom").value;
-//   document.getElementById("roomDisplay").innerHTML = roomNumber;
-// }
 
 
 /* When the user clicks on the button,
@@ -145,11 +142,6 @@ function loadImage(link) {
   ctx.clearRect(0,0, canvas.width, canvas.height);
   map.onload = render;
   map.src = link; 
-  // Set source path
-  // currentImageX = x.height;
-  // currentImageY = x.height;
-  // alert(x.height);
-  // alert(x.width);
 } 
 
 function render() {
@@ -161,26 +153,22 @@ function findRoom(list, search) {
   let check = true;
   for(let index = 0; index < list.length; ++index) {  //loops through all the rooms and checks the name to see if it is correct
     if (list[index].name == search) {
-      if(list[index].type == "rect") {
+      if(list[index].type == "rect") { // if it is a rectangle go to the function for drawing a rectangle
         drawRectangle(list[index]); 
         check = false;
       }
-      else if(list[index].type == "poly") {
+      else if(list[index].type == "poly") { // If it is a polygon go to the function for drawing polygons 
         drawPolygon(list[index]);
         check = false;
       }
-      else {
-        alert("not a polygon or rectangle???")
-      }
-      
-      
     }
   }
   if (check) {
-    alert('Room Not Found');
+    alert('Room Not Found'); // sends if the name of the room does not match anything 
   }
 }
 
+// Draws rooms of the type rectangle 
 function drawRectangle(room) { 
   ctx.clearRect(0,0, canvas.width, canvas.height);
   ctx.stroke();
@@ -192,6 +180,7 @@ function drawRectangle(room) {
   ctx.stroke();
 }
 
+// Draws the room if it a polygon 
 function drawPolygon(room) { 
   ctx.clearRect(0,0, canvas.width, canvas.height);
   ctx.stroke();
@@ -236,6 +225,7 @@ function begin() {
   }
 }
 
+// Removes any white space and capitilzies charecters. 
 function cleanString(string) {
   var cleanedString = string.replace(/ /g, ""); // uses regular expression to get rid of all white space
   cleanedString = cleanedString.toUpperCase(); // to upper case 
